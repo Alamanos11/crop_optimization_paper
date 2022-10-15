@@ -1,8 +1,10 @@
 """
------------------------  BMP optimization  ---------------------------
+--------  BMP optimization  ------------
+North Lake Erie Basin model
+Price treated as fixed
+
 April   2021
-Price is fixed
-----------------------------------------------------------------------
+----------------------------------------
 
 """
 
@@ -12,19 +14,23 @@ import os
 from ortools.linear_solver import pywraplp
 
 
-os.chdir('/Users/ja4garci/Documents/CropsOntario/pythonResults')
-
+os.chdir('~/Documents/data/folder/path')
 
 #% Parameters
-parameters = pd.read_excel('../ResultsModel/DataCropsLingo.xlsx',
-                           sheet_name='DataParametersCrops',
-                           usecols=['Pexp','Nexp','Water','Yield','Cost','Price','Names'])
+parameters = pd.read_excel(
+  '../ResultsModel/DataCropsLingo.xlsx',
+  sheet_name='DataParametersCrops',
+  usecols=['Pexp','Nexp','Water','Yield','Cost','Price','Names']
+)
+
 parameters.index = parameters.Names.tolist()
 crops = parameters.Names.tolist()
 
-baseline = pd.read_excel('../AllCropsOntario2016.xlsx',
-                         sheet_name='FinalData',
-                         usecols=['Geography'] + crops)
+baseline = pd.read_excel(
+  '../AllCropsOntario2016.xlsx',
+  sheet_name='FinalData',
+  usecols=['Geography'] + crops
+)
 
 subdivisions = baseline.Geography.tolist()
 
