@@ -14,7 +14,7 @@ import os
 from scipy.optimize import minimize,Bounds
 
 
-os.chdir('/Users/ja4garci/Documents/CropsOntario/pythonResults')
+os.chdir('~/Documents/data/folder/path')
 
 
 #%% Parameters
