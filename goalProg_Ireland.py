@@ -1,6 +1,6 @@
 """
 ---- Goal Programming demo Ireland ----
----------------------------------------------------
+---------------------------------------
 
 Crops: grass and wheat
 
@@ -48,7 +48,8 @@ Objective:
     - achieve min deviation for expected sales, costs, organic fert.
     - don't exceed available area, P emissions, C emissions, chemical fert.
 
-Created: Aug 11, 2021
+Created:    Aug 11, 2021
+By:         Jorge A. Garcia
 
 """
 
